@@ -1,0 +1,72 @@
+{
+	"name": "tatter/frontend",
+	"type": "library",
+	"description": "Bundled integration of preferred frontend tech, for CodeIgniter 4",
+	"keywords": [
+		"codeigniter",
+		"codeigniter4",
+		"frontend",
+		"framework",
+		"assets",
+		"javascript",
+		"css"
+	],
+	"homepage": "https://github.com/tattersoftware/codeigniter4-frontend",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Matthew Gatner",
+			"email": "mgatner@tattersoftware.com",
+			"homepage": "https://tattersoftware.com",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": "^7.3 || ^8.0",
+		"almasaeed2010/adminlte": "^3.0",
+		"enyo/dropzone": "^5.7",
+		"fortawesome/font-awesome": "^5.15",
+		"league/commonmark": "^1.5",
+		"nnnick/chartjs": "^2.8",
+		"peekleon/datatables-all": "^1.10",
+		"tatter/assets": "^2.0",
+		"tatter/menus": "^0.9.0",
+		"tatter/themes": "^1.0",
+		"twbs/bootstrap": "^5.0"
+	},
+	"require-dev": {
+		"codeigniter4/codeigniter4": "dev-develop",
+		"tatter/tools": "^1.8"
+	},
+	"autoload": {
+		"psr-4": {
+			"Tatter\\Frontend\\": "src"
+		},
+		"exclude-from-classmap": [
+			"**/Database/Migrations/**"
+		]
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Tests\\Support\\": "tests/_support"
+		}
+	},
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/codeigniter4/CodeIgniter4"
+		},
+		{
+			"type": "composer",
+			"url": "https://asset-packagist.org"
+		}
+	],
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"scripts": {
+		"analyze": "phpstan analyze",
+		"mutate": "infection --threads=2 --skip-initial-tests --coverage=build/phpunit",
+		"style": "phpcbf --standard=./vendor/codeigniter4/codeigniter4-standard/CodeIgniter4 tests/ src/",
+		"test": "phpunit"
+	}
+}
