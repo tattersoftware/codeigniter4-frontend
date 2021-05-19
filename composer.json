@@ -27,7 +27,7 @@
 		"enyo/dropzone": "^5.7",
 		"fortawesome/font-awesome": "^5.15",
 		"league/commonmark": "^1.5",
-		"nnnick/chartjs": "^2.8",
+		"nnnick/chartjs": "^2.8 || ^3.0",
 		"peekleon/datatables-all": "^1.10",
 		"tatter/assets": "^2.0",
 		"tatter/menus": "^0.9.0",
