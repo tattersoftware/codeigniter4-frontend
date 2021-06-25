@@ -9,7 +9,7 @@ trait VfsTrait
 	/**
 	 * Virtual workspace
 	 *
-	 * @var vfsStreamDirectory
+	 * @var vfsStreamDirectory|null
 	 */
 	protected $root;
 
