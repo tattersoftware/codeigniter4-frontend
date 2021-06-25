@@ -1,0 +1,10 @@
+{
+	"source": "almasaeed2010/adminlte/dist",
+	"destination": "vendor/adminlte",
+	"resources": [
+		{
+			"source": ".",
+			"recursive": true
+		}
+	]
+}
