@@ -18,7 +18,10 @@ trait VfsTrait
 	 */
     protected function setUpVfsTrait(): void
     {
-		$this->root = vfsStream::setup('root');
+    	if ($this->root === null)
+    	{
+			$this->root = vfsStream::setup('root');
+		}
 
 		// Create the config (if another trait has not already)
 		$this->config            = $this->config ?? config(AssetsConfig::class);
@@ -33,6 +36,9 @@ trait VfsTrait
 	 */
     protected function tearDownVfsTrait(): void
     {
-    	$this->root = null;
+    	if (empty($this->persist))
+    	{
+	    	$this->root = null;
+	    }
     }
 }

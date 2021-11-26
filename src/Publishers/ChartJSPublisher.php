@@ -2,9 +2,9 @@
 
 namespace Tatter\Frontend\Publishers;
 
-use Tatter\Frontend\FrontendPublisher;
+use Tatter\Assets\VendorPublisher;
 
-class ChartJSPublisher extends FrontendPublisher
+class ChartJSPublisher extends VendorPublisher
 {
 	/**
 	 * Destination path relative to AssetsConfig::directory.

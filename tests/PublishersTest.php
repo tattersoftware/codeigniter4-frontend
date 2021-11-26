@@ -28,7 +28,7 @@ final class PublishersTest extends FrontendTestCase
 
 		foreach ($paths as $path)
 		{
-			$file = $this->root->url() . '/' . $path;
+			$file = $this->root->url() . '/vendor/' . $path;
 			$this->assertFileExists($file);
 		}
 		$this->assertNull(null);
@@ -40,24 +40,6 @@ final class PublishersTest extends FrontendTestCase
 	public function publishersProvider(): array
 	{
 		return [
-			[
-				BootstrapPublisher::class,
-				[
-					'bootstrap/css/bootstrap.css',
-					'bootstrap/css/bootstrap.min.css.map',
-					'bootstrap/js/bootstrap.bundle.js',
-					'bootstrap/js/bootstrap.min.js.map',
-				],
-			],
-			[
-				AdminLTEPublisher::class,
-				[
-					'adminlte/css/adminlte.css',
-					'adminlte/css/dark/adminlte-dark-addon.css.map',
-					'adminlte/js/adminlte.js',
-					'adminlte/js/adminlte.js.map',
-				],
-			],
 			[
 				ChartJSPublisher::class,
 				[
