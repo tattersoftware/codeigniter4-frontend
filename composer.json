@@ -1,7 +1,7 @@
 {
     "name": "tatter/frontend",
     "type": "library",
-    "description": "Bundled integration of preferred frontend tech, for CodeIgniter 4",
+    "description": "Opinionated suite of frontend tech for CodeIgniter 4",
     "keywords": [
         "codeigniter",
         "codeigniter4",

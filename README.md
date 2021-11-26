@@ -2,6 +2,12 @@
 
 Bundled integration of preferred frontend tech, for CodeIgniter 4
 
+[![](https://github.com/tattersoftware/codeigniter4-frontend/workflows/PHPUnit/badge.svg)](https://github.com/tattersoftware/codeigniter4-frontend/actions/workflows/test.yml)
+[![](https://github.com/tattersoftware/codeigniter4-frontend/workflows/PHPStan/badge.svg)](https://github.com/tattersoftware/codeigniter4-frontend/actions/workflows/analyze.yml)
+[![](https://github.com/tattersoftware/codeigniter4-frontend/workflows/Deptrac/badge.svg)](https://github.com/tattersoftware/codeigniter4-frontend/actions/workflows/inspect.yml)
+[![Coverage Status](https://coveralls.io/repos/github/tattersoftware/codeigniter4-frontend/badge.svg?branch=develop)](https://coveralls.io/github/tattersoftware/codeigniter4-frontend?branch=develop)
+
+
 ## Installation
 
 * Install via Composer: `> composer require tatter/frontend`
