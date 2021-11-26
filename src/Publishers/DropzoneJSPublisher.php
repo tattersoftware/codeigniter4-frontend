@@ -2,9 +2,9 @@
 
 namespace Tatter\Frontend\Publishers;
 
-use Tatter\Frontend\FrontendPublisher;
+use Tatter\Assets\VendorPublisher;
 
-class DropzoneJSPublisher extends FrontendPublisher
+class DropzoneJSPublisher extends VendorPublisher
 {
 	/**
 	 * @var string

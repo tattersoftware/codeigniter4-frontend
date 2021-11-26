@@ -2,9 +2,9 @@
 
 namespace Tatter\Frontend\Publishers;
 
-use Tatter\Frontend\FrontendPublisher;
+use Tatter\Assets\VendorPublisher;
 
-class FontAwesomePublisher extends FrontendPublisher
+class FontAwesomePublisher extends VendorPublisher
 {
 	/**
 	 * @var string
