@@ -35,7 +35,7 @@ final class PublishersTest extends FrontendTestCase
 	}
 
 	/**
-	 * @return array<string,string[]>
+	 * @return array
 	 */
 	public function publishersProvider(): array
 	{

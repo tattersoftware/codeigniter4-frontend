@@ -26,8 +26,6 @@ class FontAwesomePublisher extends FrontendPublisher
 	 * discovery.
 	 *
 	 * @return boolean
-	 *
-	 * @throws RuntimeException
 	 */
 	public function publish(): bool
 	{
