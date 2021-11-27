@@ -24,14 +24,12 @@ class FontAwesomePublisher extends VendorPublisher
 	 * Reads files from the sources and copies them out to their destinations.
 	 * This method should be reimplemented by child classes intended for
 	 * discovery.
-	 *
-	 * @return boolean
 	 */
 	public function publish(): bool
 	{
 		return $this
-			->addPath('css')
-			->addPath('webfonts')
-			->merge(true);
+		    ->addPath('css')
+		    ->addPath('webfonts')
+		    ->merge(true);
 	}
 }
