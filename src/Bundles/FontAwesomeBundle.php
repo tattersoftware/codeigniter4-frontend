@@ -8,8 +8,6 @@ class FontAwesomeBundle extends VendorBundle
 {
 	/**
 	 * Applies any initial inputs after the constructor.
-	 *
-	 * @return void
 	 */
 	protected function define(): void
 	{

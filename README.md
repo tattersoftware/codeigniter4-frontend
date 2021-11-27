@@ -1,6 +1,6 @@
 # Tatter\Frontend
 
-Bundled integration of preferred frontend tech, for CodeIgniter 4
+Opinionated suite of frontend tech for CodeIgniter 4
 
 [![](https://github.com/tattersoftware/codeigniter4-frontend/workflows/PHPUnit/badge.svg)](https://github.com/tattersoftware/codeigniter4-frontend/actions/workflows/test.yml)
 [![](https://github.com/tattersoftware/codeigniter4-frontend/workflows/PHPStan/badge.svg)](https://github.com/tattersoftware/codeigniter4-frontend/actions/workflows/analyze.yml)
@@ -16,8 +16,8 @@ Bundled integration of preferred frontend tech, for CodeIgniter 4
 
 ### Asset Libraries
 
-* [AdminLTE](https://adminlte.io) - Admin Dashboard Template
-* [Bootstrap](https://getbootstrap.com) - Mobile-first front-end CSS framework directed at responsive web development
+* [AdminLTE](https://adminlte.io) (via [Tatter\AdminLTE](https://packagist.org/packages/tatter/adminlte)) - Admin Dashboard Template
+* [Bootstrap](https://getbootstrap.com) (via [Tatter\Bootstrap](https://packagist.org/packages/tatter/bootstrap))  - Mobile-first front-end CSS framework directed at responsive web development
 * [ChartJS](https://www.chartjs.org) - Simple yet flexible JavaScript charting for designers & developers
 * [DataTables](https://datatables.net) - To enhance the accessibility of data in HTML tables
 * [Dropzone](https://www.dropzonejs.com) - Open source library for drag’n’drop file uploads with image previews
@@ -25,10 +25,10 @@ Bundled integration of preferred frontend tech, for CodeIgniter 4
 
 ### Support Libraries
 
-* [League/CommonMark](https://packagist.org/packages/league/commonmark)
-* [Tatter/Assets](https://packagist.org/packages/tatter/assets)
-* [Tatter/Menus](https://packagist.org/packages/tatter/menus)
-* [Tatter/Themes](https://packagist.org/packages/tatter/themes)
+* [League\CommonMark](https://packagist.org/packages/league/commonmark)
+* [Tatter\Assets](https://packagist.org/packages/tatter/assets)
+* [Tatter\Menus](https://packagist.org/packages/tatter/menus)
+* [Tatter\Themes](https://packagist.org/packages/tatter/themes)
 
 ## Change Log
 
