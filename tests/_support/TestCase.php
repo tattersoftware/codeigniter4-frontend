@@ -10,17 +10,17 @@ use Tatter\Assets\Config\Assets as AssetsConfig;
 
 abstract class TestCase extends CIUnitTestCase
 {
-	/**
-	 * Virtual workspace
-	 *
-	 * @var vfsStreamDirectory
-	 */
-	protected $root;
+    /**
+     * Virtual workspace
+     *
+     * @var vfsStreamDirectory
+     */
+    protected $root;
 
-	/**
-	 * @var AssetsConfig
-	 */
-	protected $config;
+    /**
+     * @var AssetsConfig
+     */
+    protected $config;
 
     /**
      * Preps the config and VFS.
@@ -29,16 +29,16 @@ abstract class TestCase extends CIUnitTestCase
     {
         parent::setUp();
 
-		$this->root = vfsStream::setup('root');
+        $this->root = vfsStream::setup('root');
 
-		// Create the config (if a trait has not already)
-		$this->config                = Asset::config();
-		$this->config->directory     = $this->root->url() . DIRECTORY_SEPARATOR;
-		$this->config->useTimestamps = false; // These make testing much harder
+        // Create the config (if a trait has not already)
+        $this->config                = Asset::config();
+        $this->config->directory     = $this->root->url() . DIRECTORY_SEPARATOR;
+        $this->config->useTimestamps = false; // These make testing much harder
 
-		Asset::useConfig($this->config);
+        Asset::useConfig($this->config);
 
-		// Add VFS as an allowed Publisher directory
-		config('Publisher')->restrictions[$this->config->directory] = '*';
-	}
+        // Add VFS as an allowed Publisher directory
+        config('Publisher')->restrictions[$this->config->directory] = '*';
+    }
 }
