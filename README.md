@@ -38,7 +38,9 @@ requiring `twbs/bootstrap` with an explicit version:
 * Version 4: `composer require twbs/bootstrap:^4.0`
 * Version 5: `composer require twbs/bootstrap:^5.0`
 
-AdminLTE and other Bootstrap-specific libraries will adjust accordingly.
+AdminLTE and other Bootstrap-specific libraries will adjust accordingly. Using Bootstrap 4
+will also include jQuery (via [Tatter\JQuery](https://packagist.org/packages/tatter/jquery))
+as it is a dependency.
 
 ## Included Solutions
 
@@ -46,9 +48,7 @@ AdminLTE and other Bootstrap-specific libraries will adjust accordingly.
 
 * [AdminLTE](https://adminlte.io) (via [Tatter\AdminLTE](https://packagist.org/packages/tatter/adminlte)) - Admin Dashboard Template
 * [Bootstrap](https://getbootstrap.com) (via [Tatter\Bootstrap](https://packagist.org/packages/tatter/bootstrap))  - Mobile-first front-end CSS framework directed at responsive web development
-* [ChartJS](https://www.chartjs.org) - Simple yet flexible JavaScript charting for designers & developers
 * [DataTables](https://datatables.net) - To enhance the accessibility of data in HTML tables
-* [Dropzone](https://www.dropzonejs.com) - Open source library for drag’n’drop file uploads with image previews
 * [FontAwesome](https://fontawesome.com) - Popular icon set and toolkit for vector icons and social logos
 
 ### Support Libraries
@@ -91,8 +91,6 @@ namespace Config;
 
 use Tatter\AdminLTE\Bundles\AdminLTEBundle;
 use Tatter\Bootstrap\Bundles\BootstrapBundle;
-use Tatter\Frontend\Bundles\ChartJSBundle;
-use Tatter\Frontend\Bundles\DropzoneJSBundle;
 use Tatter\Frontend\Bundles\FontAwesomeBundle;
 
 class Assets extends \Tatter\Assets\Config\Assets
@@ -112,3 +110,8 @@ class Assets extends \Tatter\Assets\Config\Assets
     ];
 }
 ```
+
+Note that Bundles include their dependency (e.g. AdminLTE includes Bootstrap, Bootstrap 4
+includes jQuery), so while there is no harm in repeating assets it is also unnecessary.
+This does not extend to optional plugins, e.g. if we want to use FontAwesome in AdminLTE
+you will need to include both.

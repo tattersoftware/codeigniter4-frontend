@@ -6,11 +6,11 @@ use Tatter\Assets\VendorBundle;
 
 class FontAwesomeBundle extends VendorBundle
 {
-	/**
-	 * Applies any initial inputs after the constructor.
-	 */
-	protected function define(): void
-	{
-		$this->addPath('font-awesome/css/all.min.css');
-	}
+    /**
+     * Applies any initial inputs after the constructor.
+     */
+    protected function define(): void
+    {
+        $this->addPath('font-awesome/css/all.min.css');
+    }
 }
