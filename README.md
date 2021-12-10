@@ -34,6 +34,7 @@ php spark publish
 
 ### Asset Libraries
 
+* [Bootstrap](https://getbootstrap.com) - Mobile-first front-end CSS framework directed at responsive web development
 * [FontAwesome](https://fontawesome.com) - Popular icon set and toolkit for vector icons and social logos
 * [jQuery](https://jquery.com) - A fast, small, and feature-rich JavaScript library
 
