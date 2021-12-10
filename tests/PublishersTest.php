@@ -37,6 +37,15 @@ final class PublishersTest extends TestCase
     {
         return [
             [
+                AdminLTEPublisher::class,
+                [
+                    'adminlte/css/adminlte.css',
+                    'adminlte/img/AdminLTELogo.png',
+                    'adminlte/js/adminlte.js',
+                    'adminlte/js/adminlte.min.js.map',
+                ],
+            ],
+            [
                 BootstrapPublisher::class,
                 [
                     'bootstrap/css/bootstrap.css',

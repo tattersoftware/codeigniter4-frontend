@@ -46,6 +46,7 @@ AdminLTE and other Bootstrap-specific libraries will adjust accordingly.
 
 ### Asset Libraries
 
+* [AdminLTE](https://adminlte.io) - Admin dashboard template
 * [Bootstrap](https://getbootstrap.com) - Mobile-first front-end CSS framework directed at responsive web development
 * [DataTables](https://datatables.net) - To enhance the accessibility of data in HTML tables
 * [FontAwesome](https://fontawesome.com) - Popular icon set and toolkit for vector icons and social logos

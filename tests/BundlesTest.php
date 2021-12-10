@@ -57,6 +57,17 @@ final class BundlesTest extends TestCase
     {
         return [
             [
+                AdminLTEBundle::class,
+                [
+                    'adminlte.min.css',
+                    'bootstrap.min.css',
+                    'jquery.min.js',
+                ],
+                [
+                    'adminlte.min.js',
+                ],
+            ],
+            [
                 BootstrapBundle::class,
                 [
                     'bootstrap.min.css',
