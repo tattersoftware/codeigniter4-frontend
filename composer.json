@@ -23,10 +23,8 @@
     ],
     "require": {
         "php": "^7.3 || ^8.0",
-        "enyo/dropzone": "^5.7",
         "fortawesome/font-awesome": "^5.15",
         "league/commonmark": "^1.5",
-        "tatter/adminlte": "^1.0 || ^2.0",
         "tatter/assets": "^3.0",
         "tatter/menus": "^1.0",
         "tatter/themes": "^2.0"

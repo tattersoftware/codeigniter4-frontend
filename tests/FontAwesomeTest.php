@@ -9,7 +9,7 @@ use Tests\Support\TestCase;
  */
 final class FontAwesomeTest extends TestCase
 {
-    public function testFontAwesome()
+    public function testPublisher()
     {
         // Partial list of expected files to be published
         $expected = [
@@ -19,19 +19,17 @@ final class FontAwesomeTest extends TestCase
             'font-awesome/webfonts/fa-solid-900.woff2',
         ];
 
-        $publisher = new FontAwesomePublisher();
-        $publisher->publish();
+        $this->assertPublishesFiles(FontAwesomePublisher::class, $expected);
+    }
 
-        $this->assertSame([], $publisher->getErrors());
-        $this->assertNotSame([], $publisher->getPublished());
+    public function testBundle()
+    {
+        // Partial lists of expected files to be bundled
+        $head = [
+            'all.min.css',
+        ];
+        $body = [];
 
-        foreach ($expected as $path) {
-            $file = $this->config->directory . $this->config->vendor . $path;
-            $this->assertFileExists($file);
-        }
-
-        $bundle = new FontAwesomeBundle();
-
-        $this->assertStringContainsString('all.min.css', $bundle->head());
+        $this->assertBundlesFiles(FontAwesomeBundle::class, $head, $body);
     }
 }
