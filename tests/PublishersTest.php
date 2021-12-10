@@ -46,6 +46,21 @@ final class PublishersTest extends TestCase
                 ],
             ],
             [
+                DataTablesPublisher::class,
+                [
+                    'datatables/js/jquery.dataTables.js',
+                    'datatables/types/types.d.ts',
+                ],
+            ],
+            [
+                DataTablesStylePublisher::class,
+                [
+                    'datatables/css/dataTables.bootstrap4.min.css',
+                    'datatables/images/sort_asc_disabled.png',
+                    'datatables/js/dataTables.bootstrap4.js',
+                ],
+            ],
+            [
                 FontAwesomePublisher::class,
                 [
                     'font-awesome/css/all.min.css',

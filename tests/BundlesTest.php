@@ -67,6 +67,18 @@ final class BundlesTest extends TestCase
                 ],
             ],
             [
+                DataTablesBundle::class,
+                [
+                    'bootstrap.min.css',
+                    'jquery.min.js',
+                ],
+                [
+                    'bootstrap.bundle.min.js',
+                    'dataTables.bootstrap4.min.js',
+                    'jquery.dataTables.min.js',
+                ],
+            ],
+            [
                 FontAwesomeBundle::class,
                 [
                     'all.min.css',

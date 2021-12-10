@@ -23,6 +23,7 @@
     ],
     "require": {
         "php": "^7.3 || ^8.0",
+        "datatables.net/datatables.net-bs4": "dev-master",
         "fortawesome/font-awesome": "^5.15",
         "components/jquery": "^3.3",
         "league/commonmark": "^1.5",
@@ -51,7 +52,11 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/codeigniter4/CodeIgniter4"
+            "url": "https://github.com/codeigniter4/CodeIgniter4.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/DataTables/Dist-DataTables-Bootstrap4.git"
         },
         {
             "type": "composer",
