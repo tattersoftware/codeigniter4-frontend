@@ -2,6 +2,8 @@
 
 use CodeIgniter\Publisher\Publisher;
 use Tatter\Frontend\Bundles\FontAwesomeBundle;
+use Tatter\Frontend\Bundles\JQueryBundle;
+use Tatter\Frontend\FrontendBundle;
 use Tests\Support\TestCase;
 
 /**
@@ -9,36 +11,35 @@ use Tests\Support\TestCase;
  */
 final class BundlesTest extends TestCase
 {
-	private $didPublish = false;
+    private $didPublish = false;
 
-	/**
-	 * Publishes all files once so they are
-	 * available for bundles.
-	 */
+    /**
+     * Publishes all files once so they are
+     * available for bundles.
+     */
     protected function setUp(): void
     {
         parent::setUp();
 
         // Make sure everything is published
         if (! $this->didPublish) {
-	        foreach (Publisher::discover() as $publisher) {
-    	        $publisher->publish();
-        	}
+            foreach (Publisher::discover() as $publisher) {
+                $publisher->publish();
+            }
 
-			$this->didPublish = true;
-		}
-	}
+            $this->didPublish = true;
+        }
+    }
 
     /**
-	 * @dataProvider bundleProvider
-	 *
+     * @dataProvider bundleProvider
+     *
      * @param class-string<FrontendBundle> $class
      * @param string[]                     $expectedHeadFiles
      * @param string[]                     $expectedBodyFiles
      */
     public function testBundlesFiles(string $class, array $expectedHeadFiles, array $expectedBodyFiles): void
     {
-
         $bundle = new $class();
         $head   = $bundle->head();
         $body   = $bundle->body();
@@ -54,14 +55,21 @@ final class BundlesTest extends TestCase
 
     public function bundleProvider()
     {
-    	return [
-    		[
-    			FontAwesomeBundle::class,
-    			[
-		            'all.min.css',
-				],
-    			[],
-    		],
-    	];
+        return [
+            [
+                FontAwesomeBundle::class,
+                [
+                    'all.min.css',
+                ],
+                [],
+            ],
+            [
+                JQueryBundle::class,
+                [
+                    'jquery.min.js', // Note that unlike most JS files this goes in <head>
+                ],
+                [],
+            ],
+        ];
     }
 }

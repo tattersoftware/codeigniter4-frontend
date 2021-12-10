@@ -1,6 +1,8 @@
 <?php
 
+use Tatter\Frontend\FrontendPublisher;
 use Tatter\Frontend\Publishers\FontAwesomePublisher;
+use Tatter\Frontend\Publishers\JQueryPublisher;
 use Tests\Support\TestCase;
 
 /**
@@ -9,8 +11,8 @@ use Tests\Support\TestCase;
 final class PublishersTest extends TestCase
 {
     /**
-	 * @dataProvider publisherProvider
-	 *
+     * @dataProvider publisherProvider
+     *
      * @param class-string<FrontendPublisher> $class
      * @param string[]                        $expected
      */
@@ -33,16 +35,22 @@ final class PublishersTest extends TestCase
 
     public function publisherProvider()
     {
-    	return [
-    		[
-    			FontAwesomePublisher::class,
-    			[
-					'font-awesome/css/all.min.css',
-					'font-awesome/css/svg-with-js.css',
-					'font-awesome/webfonts/fa-brands-400.eot',
-					'font-awesome/webfonts/fa-solid-900.woff2',
-				],
-    		],
-    	];
+        return [
+            [
+                FontAwesomePublisher::class,
+                [
+                    'font-awesome/css/all.min.css',
+                    'font-awesome/css/svg-with-js.css',
+                    'font-awesome/webfonts/fa-brands-400.eot',
+                    'font-awesome/webfonts/fa-solid-900.woff2',
+                ],
+            ],
+            [
+                JQueryPublisher::class,
+                [
+                    'jquery/jquery.min.js',
+                ],
+            ],
+        ];
     }
 }

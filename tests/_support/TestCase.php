@@ -7,8 +7,6 @@ use org\bovigo\vfs\vfsStream;
 use org\bovigo\vfs\vfsStreamDirectory;
 use Tatter\Assets\Asset;
 use Tatter\Assets\Config\Assets as AssetsConfig;
-use Tatter\Frontend\FrontendBundle;
-use Tatter\Frontend\FrontendPublisher;
 
 abstract class TestCase extends CIUnitTestCase
 {

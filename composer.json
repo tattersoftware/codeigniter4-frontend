@@ -24,6 +24,7 @@
     "require": {
         "php": "^7.3 || ^8.0",
         "fortawesome/font-awesome": "^5.15",
+        "components/jquery": "^3.3",
         "league/commonmark": "^1.5",
         "tatter/assets": "^3.0",
         "tatter/menus": "^1.0",
