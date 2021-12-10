@@ -2,9 +2,9 @@
 
 namespace Tatter\Frontend\Bundles;
 
-use Tatter\Assets\VendorBundle;
+use Tatter\Frontend\FrontendBundle;
 
-class FontAwesomeBundle extends VendorBundle
+class FontAwesomeBundle extends FrontendBundle
 {
     /**
      * Applies any initial inputs after the constructor.
