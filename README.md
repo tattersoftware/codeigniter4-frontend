@@ -30,11 +30,24 @@ command to inject all assets into your front controller path:
 php spark publish
 ```
 
+<<<<<<< HEAD
+=======
+### Bootstrap and Versioning
+
+This dependency stack includes Bootstrap support for both versions 4 and 5. By default
+Composer will select the highest available version but it is a good idea to lock to one by
+requiring `twbs/bootstrap` with an explicit version:
+* Version 4: `composer require twbs/bootstrap:^4.0`
+* Version 5: `composer require twbs/bootstrap:^5.0`
+
+AdminLTE and other Bootstrap-specific libraries will adjust accordingly.
+
 ## Included Solutions
 
 ### Asset Libraries
 
 * [Bootstrap](https://getbootstrap.com) - Mobile-first front-end CSS framework directed at responsive web development
+* [DataTables](https://datatables.net) - To enhance the accessibility of data in HTML tables
 * [FontAwesome](https://fontawesome.com) - Popular icon set and toolkit for vector icons and social logos
 * [jQuery](https://jquery.com) - A fast, small, and feature-rich JavaScript library
 
@@ -44,6 +57,9 @@ php spark publish
 * [Tatter\Assets](https://packagist.org/packages/tatter/assets)
 * [Tatter\Menus](https://packagist.org/packages/tatter/menus)
 * [Tatter\Themes](https://packagist.org/packages/tatter/themes)
+
+> *Note: jQuery is included because some other libraries depend on it; should those libraries
+> remove it as a dependency or be removed themselve then jQuery will no longer be included.
 
 ## Configuration
 
