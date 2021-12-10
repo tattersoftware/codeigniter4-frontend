@@ -30,26 +30,12 @@ command to inject all assets into your front controller path:
 php spark publish
 ```
 
-### Bootstrap and Versioning
-
-This dependency stack includes Bootstrap support for both versions 4 and 5. By default
-Composer will select the highest available version but it is a good idea to lock to one by
-requiring `twbs/bootstrap` with an explicit version:
-* Version 4: `composer require twbs/bootstrap:^4.0`
-* Version 5: `composer require twbs/bootstrap:^5.0`
-
-AdminLTE and other Bootstrap-specific libraries will adjust accordingly. Using Bootstrap 4
-will also include jQuery (via [Tatter\JQuery](https://packagist.org/packages/tatter/jquery))
-as it is a dependency.
-
 ## Included Solutions
 
 ### Asset Libraries
 
-* [AdminLTE](https://adminlte.io) (via [Tatter\AdminLTE](https://packagist.org/packages/tatter/adminlte)) - Admin Dashboard Template
-* [Bootstrap](https://getbootstrap.com) (via [Tatter\Bootstrap](https://packagist.org/packages/tatter/bootstrap))  - Mobile-first front-end CSS framework directed at responsive web development
-* [DataTables](https://datatables.net) - To enhance the accessibility of data in HTML tables
 * [FontAwesome](https://fontawesome.com) - Popular icon set and toolkit for vector icons and social logos
+* [jQuery](https://jquery.com) - A fast, small, and feature-rich JavaScript library
 
 ### Support Libraries
 
@@ -89,8 +75,8 @@ want them to be applied. **app/Config/Assets.php**:
 
 namespace Config;
 
-use Tatter\AdminLTE\Bundles\AdminLTEBundle;
-use Tatter\Bootstrap\Bundles\BootstrapBundle;
+use Tatter\Frontend\Bundles\AdminLTEBundle;
+use Tatter\Frontend\Bundles\BootstrapBundle;
 use Tatter\Frontend\Bundles\FontAwesomeBundle;
 
 class Assets extends \Tatter\Assets\Config\Assets
@@ -111,7 +97,18 @@ class Assets extends \Tatter\Assets\Config\Assets
 }
 ```
 
-Note that Bundles include their dependency (e.g. AdminLTE includes Bootstrap, Bootstrap 4
+Note that each Bundle includes its dependency (e.g. AdminLTE includes Bootstrap, Bootstrap
 includes jQuery), so while there is no harm in repeating assets it is also unnecessary.
-This does not extend to optional plugins, e.g. if we want to use FontAwesome in AdminLTE
+This does not extend to optional plugins, e.g. if you want to use FontAwesome in AdminLTE
 you will need to include both.
+
+## Versioning
+
+The intent is to maintain two major versions of this library for an indefinite amount of
+time until AdminLTE 4 is fully released and stable for production use. The core differences
+will be around the dependency stack for AdminLTE, Bootstrap, and jQuery.
+
+| Library version | Bootstrap version  | AdminLTE version  | jQuery |
+| --------------: | -----------------: | ----------------: | :----: |
+| `1.x`           | `4.x`              | `3.x`             | Yes    |
+| `2.x`           | `5.x`              | `4.x`             | No     |
