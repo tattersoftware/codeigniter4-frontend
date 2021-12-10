@@ -1,8 +1,8 @@
 <?php
 
+namespace Tatter\Frontend\Publishers;
+
 use Tatter\Frontend\FrontendPublisher;
-use Tatter\Frontend\Publishers\FontAwesomePublisher;
-use Tatter\Frontend\Publishers\JQueryPublisher;
 use Tests\Support\TestCase;
 
 /**
@@ -36,6 +36,15 @@ final class PublishersTest extends TestCase
     public function publisherProvider()
     {
         return [
+            [
+                BootstrapPublisher::class,
+                [
+                    'bootstrap/css/bootstrap.css',
+                    'bootstrap/css/bootstrap.min.css.map',
+                    'bootstrap/js/bootstrap.bundle.js',
+                    'bootstrap/js/bootstrap.min.js.map',
+                ],
+            ],
             [
                 FontAwesomePublisher::class,
                 [

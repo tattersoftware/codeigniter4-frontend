@@ -1,8 +1,8 @@
 <?php
 
+namespace Tatter\Frontend\Bundles;
+
 use CodeIgniter\Publisher\Publisher;
-use Tatter\Frontend\Bundles\FontAwesomeBundle;
-use Tatter\Frontend\Bundles\JQueryBundle;
 use Tatter\Frontend\FrontendBundle;
 use Tests\Support\TestCase;
 
@@ -56,6 +56,16 @@ final class BundlesTest extends TestCase
     public function bundleProvider()
     {
         return [
+            [
+                BootstrapBundle::class,
+                [
+                    'bootstrap.min.css',
+                    'jquery.min.js',
+                ],
+                [
+                    'bootstrap.bundle.min.js',
+                ],
+            ],
             [
                 FontAwesomeBundle::class,
                 [

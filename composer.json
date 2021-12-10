@@ -28,7 +28,8 @@
         "league/commonmark": "^1.5",
         "tatter/assets": "^3.0",
         "tatter/menus": "^1.0",
-        "tatter/themes": "^2.0"
+        "tatter/themes": "^2.0",
+        "twbs/bootstrap": "^4.0"
     },
     "require-dev": {
         "codeigniter4/codeigniter4": "dev-develop",
