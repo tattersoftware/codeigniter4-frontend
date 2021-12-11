@@ -23,6 +23,7 @@
     ],
     "require": {
         "php": "^7.3 || ^8.0",
+        "almasaeed2010/adminlte": "^3.0",
         "datatables.net/datatables.net-bs4": "dev-master",
         "fortawesome/font-awesome": "^5.15",
         "components/jquery": "^3.3",
