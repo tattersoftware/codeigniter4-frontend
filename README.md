@@ -30,18 +30,6 @@ command to inject all assets into your front controller path:
 php spark publish
 ```
 
-<<<<<<< HEAD
-=======
-### Bootstrap and Versioning
-
-This dependency stack includes Bootstrap support for both versions 4 and 5. By default
-Composer will select the highest available version but it is a good idea to lock to one by
-requiring `twbs/bootstrap` with an explicit version:
-* Version 4: `composer require twbs/bootstrap:^4.0`
-* Version 5: `composer require twbs/bootstrap:^5.0`
-
-AdminLTE and other Bootstrap-specific libraries will adjust accordingly.
-
 ## Included Solutions
 
 ### Asset Libraries
