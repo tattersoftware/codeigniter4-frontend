@@ -3,10 +3,14 @@ name: PHPUnit
 on:
   pull_request:
     branches:
-      - develop
+      - 'develop'
+      - 'releases/**'
+      - 'v*'
   push:
     branches:
-      - develop
+      - 'develop'
+      - 'releases/**'
+      - 'v*'
 
 jobs:
   main:

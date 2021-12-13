@@ -6,6 +6,8 @@ on:
   pull_request:
     branches:
       - 'develop'
+      - 'releases/**'
+      - 'v*'
     paths:
       - 'app/**'
       - 'src/**'
@@ -14,6 +16,8 @@ on:
   push:
     branches:
       - 'develop'
+      - 'releases/**'
+      - 'v*'
     paths:
       - 'app/**'
       - 'src/**'
