@@ -36,9 +36,8 @@ php spark publish
 
 * [AdminLTE](https://adminlte.io) - Admin dashboard template
 * [Bootstrap](https://getbootstrap.com) - Mobile-first front-end CSS framework directed at responsive web development
-* [DataTables](https://datatables.net) - To enhance the accessibility of data in HTML tables
 * [FontAwesome](https://fontawesome.com) - Popular icon set and toolkit for vector icons and social logos
-* [jQuery](https://jquery.com) - A fast, small, and feature-rich JavaScript library
+* [List.js](https://listjs.com) - Tiny yet powerful features for plain HTML lists and tables
 
 ### Support Libraries
 
@@ -48,9 +47,6 @@ php spark publish
 * [Tatter\Layouts](https://packagist.org/packages/tatter/layouts)
 * [Tatter\Menus](https://packagist.org/packages/tatter/menus)
 * [Tatter\Themes](https://packagist.org/packages/tatter/themes)
-
-> *Note: jQuery is included because some other libraries depend on it; should those libraries
-> remove it as a dependency or be removed themselve then jQuery will no longer be included.
 
 ## Versioning
 
@@ -116,10 +112,9 @@ class Assets extends \Tatter\Assets\Config\Assets
 }
 ```
 
-Note that each Bundle includes its dependency (e.g. AdminLTE includes Bootstrap, Bootstrap
-includes jQuery), so while there is no harm in repeating assets it is also unnecessary.
-This does not extend to optional plugins, e.g. if you want to use FontAwesome in AdminLTE
-you will need to include both.
+Note that each Bundle includes its dependency (e.g. AdminLTE includes Bootstrap), so while
+there is no harm in repeating assets it is also unnecessary. This does not extend to optional
+plugins, e.g. if you want to use FontAwesome in AdminLTE you will need to include both.
 
 ## Testing
 
