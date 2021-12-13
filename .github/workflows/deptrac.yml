@@ -4,6 +4,8 @@ on:
   pull_request:
     branches:
       - develop
+      - 'releases/**'
+      - 'v*'
     paths:
       - '**.php'
       - 'composer.*'
@@ -12,6 +14,8 @@ on:
   push:
     branches:
       - develop
+      - 'releases/**'
+      - 'v*'
     paths:
       - '**.php'
       - 'composer.*'
