@@ -26,6 +26,7 @@
         "fortawesome/font-awesome": "^5.15",
         "league/commonmark": "^1.5",
         "mgatner/adminlte4": "dev-master",
+        "npm-asset/list.js": "^2.3",
         "tatter/assets": "^3.0",
         "tatter/layouts": "^1.0",
         "tatter/menus": "^1.0",

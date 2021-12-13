@@ -39,6 +39,13 @@ final class BundlesTest extends BundlesTestCase
                 ],
                 [],
             ],
+            [
+                ListJSBundle::class,
+                [],
+                [
+                    'list.min.js',
+                ],
+            ],
         ];
     }
 }
