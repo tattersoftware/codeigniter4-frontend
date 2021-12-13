@@ -2,38 +2,14 @@
 
 namespace Tatter\Frontend\Publishers;
 
-use Tatter\Frontend\FrontendPublisher;
-use Tests\Support\TestCase;
+use Tatter\Frontend\Test\PublishersTestCase;
 
 /**
  * @internal
  */
-final class PublishersTest extends TestCase
+final class PublishersTest extends PublishersTestCase
 {
-    /**
-     * @dataProvider publisherProvider
-     *
-     * @param class-string<FrontendPublisher> $class
-     * @param string[]                        $expected
-     */
-    public function testPublishesFiles(string $class, array $expected): void
-    {
-        $publisher = new $class();
-        $result    = $publisher->publish();
-
-        // Verify that publication succeeded
-        $this->assertTrue($result);
-        $this->assertSame([], $publisher->getErrors());
-        $this->assertNotSame([], $publisher->getPublished());
-
-        // Check for each of the expected files
-        foreach ($expected as $path) {
-            $file = $this->config->directory . $this->config->vendor . $path;
-            $this->assertFileExists($file);
-        }
-    }
-
-    public function publisherProvider()
+    public function publisherProvider(): array
     {
         return [
             [

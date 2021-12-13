@@ -85,6 +85,7 @@ jobs:
     steps:
       - name: Upload Coveralls results
         uses: coverallsapp/github-action@master
+        continue-on-error: true
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           parallel-finished: true

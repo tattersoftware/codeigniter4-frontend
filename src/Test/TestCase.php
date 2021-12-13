@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Support;
+namespace Tatter\Frontend\Test;
 
 use CodeIgniter\Test\CIUnitTestCase;
 use org\bovigo\vfs\vfsStream;

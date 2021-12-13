@@ -1,7 +1,7 @@
 <?php
 
 use Tatter\Frontend\FrontendPublisher;
-use Tests\Support\TestCase;
+use Tatter\Frontend\Test\TestCase;
 
 /**
  * @internal
