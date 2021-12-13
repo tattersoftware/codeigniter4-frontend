@@ -50,6 +50,17 @@ php spark publish
 > *Note: jQuery is included because some other libraries depend on it; should those libraries
 > remove it as a dependency or be removed themselve then jQuery will no longer be included.
 
+## Versioning
+
+The intent is to maintain two major versions of this library for an indefinite amount of
+time until AdminLTE 4 is fully released and stable for production use. The core differences
+will be around the dependency stack for AdminLTE, Bootstrap, and jQuery.
+
+| Library version | Bootstrap version  | AdminLTE version  | jQuery |
+| --------------: | -----------------: | ----------------: | :----: |
+| `1.x`           | `4.x`              | `3.x`             | Yes    |
+| `2.x`           | `5.x`              | `4.x`             | No     |
+
 ## Configuration
 
 *For full configuration details see the [Assets docs](https://github.com/tattersoftware/codeigniter4-assets).*
@@ -108,13 +119,10 @@ includes jQuery), so while there is no harm in repeating assets it is also unnec
 This does not extend to optional plugins, e.g. if you want to use FontAwesome in AdminLTE
 you will need to include both.
 
-## Versioning
+## Testing
 
-The intent is to maintain two major versions of this library for an indefinite amount of
-time until AdminLTE 4 is fully released and stable for production use. The core differences
-will be around the dependency stack for AdminLTE, Bootstrap, and jQuery.
-
-| Library version | Bootstrap version  | AdminLTE version  | jQuery |
-| --------------: | -----------------: | ----------------: | :----: |
-| `1.x`           | `4.x`              | `3.x`             | Yes    |
-| `2.x`           | `5.x`              | `4.x`             | No     |
+This library includes some PHPUnit extension classes in **src/Test/** to assist with testing
+vendor-sourced Bundles and Publishers. These are uses to test the files from this library
+but are also available for other projects that use `Tatter\Frontend`. To test your own
+classes simply extend the appropriate test case and add a data provider method with your
+class name and criteria to meet. See the test files in **tests/** for examples.
