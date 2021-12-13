@@ -6,7 +6,7 @@ use Tatter\Frontend\FrontendBundle;
 
 class BootstrapBundle extends FrontendBundle
 {
-    public const VERSION = 4;
+    public const VERSION = 5;
 
     /**
      * Applies any initial inputs after the constructor.
@@ -15,7 +15,6 @@ class BootstrapBundle extends FrontendBundle
     {
         $this
             ->addPath('bootstrap/css/bootstrap.min.css')
-            ->addPath('bootstrap/js/bootstrap.bundle.min.js')
-            ->merge(new JQueryBundle());
+            ->addPath('bootstrap/js/bootstrap.bundle.min.js');
     }
 }

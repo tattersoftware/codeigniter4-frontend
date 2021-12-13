@@ -23,17 +23,15 @@
     "homepage": "https://github.com/tattersoftware/codeigniter4-frontend",
     "require": {
         "php": "^8.0",
-        "almasaeed2010/adminlte": "^3.0",
-        "components/jquery": "^3.3",
-        "datatables.net/datatables.net-bs4": "dev-master",
         "fortawesome/font-awesome": "^5.15 || ^6.0",
         "league/commonmark": "^2.0",
+        "mgatner/adminlte4": "dev-master",
         "tatter/alerts": "^3.0",
         "tatter/assets": "^3.0",
         "tatter/layouts": "^1.0",
         "tatter/menus": "^1.0",
         "tatter/themes": "^2.0",
-        "twbs/bootstrap": "^4.0"
+        "twbs/bootstrap": "^5.0"
     },
     "require-dev": {
         "codeigniter4/framework": "^4.1",
@@ -42,7 +40,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/DataTables/Dist-DataTables-Bootstrap4.git"
+            "url": "https://github.com/MGatner/adminlte4.git"
         },
         {
             "type": "composer",
