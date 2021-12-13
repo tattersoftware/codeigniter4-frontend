@@ -38,6 +38,15 @@ final class PublishersTest extends PublishersTestCase
                     'font-awesome/webfonts/fa-solid-900.woff2',
                 ],
             ],
+            [
+                ListJSPublisher::class,
+                [
+                    'listjs/list.js',
+                    'listjs/list.js.map',
+                    'listjs/list.min.js',
+                    'listjs/list.min.js.map',
+                ],
+            ],
         ];
     }
 }
