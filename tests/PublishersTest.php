@@ -15,10 +15,9 @@ final class PublishersTest extends PublishersTestCase
             [
                 AdminLTEPublisher::class,
                 [
+                    'adminlte/assets/img/AdminLTELogo.png',
                     'adminlte/css/adminlte.css',
-                    'adminlte/img/AdminLTELogo.png',
                     'adminlte/js/adminlte.js',
-                    'adminlte/js/adminlte.min.js.map',
                 ],
             ],
             [
@@ -31,33 +30,12 @@ final class PublishersTest extends PublishersTestCase
                 ],
             ],
             [
-                DataTablesPublisher::class,
-                [
-                    'datatables/js/jquery.dataTables.js',
-                    'datatables/types/types.d.ts',
-                ],
-            ],
-            [
-                DataTablesStylePublisher::class,
-                [
-                    'datatables/css/dataTables.bootstrap4.min.css',
-                    'datatables/images/sort_asc_disabled.png',
-                    'datatables/js/dataTables.bootstrap4.js',
-                ],
-            ],
-            [
                 FontAwesomePublisher::class,
                 [
                     'font-awesome/css/all.min.css',
                     'font-awesome/css/svg-with-js.css',
                     'font-awesome/webfonts/fa-brands-400.eot',
                     'font-awesome/webfonts/fa-solid-900.woff2',
-                ],
-            ],
-            [
-                JQueryPublisher::class,
-                [
-                    'jquery/jquery.min.js',
                 ],
             ],
         ];

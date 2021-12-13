@@ -23,16 +23,14 @@
     ],
     "require": {
         "php": "^7.3 || ^8.0",
-        "almasaeed2010/adminlte": "^3.0",
-        "datatables.net/datatables.net-bs4": "dev-master",
         "fortawesome/font-awesome": "^5.15",
-        "components/jquery": "^3.3",
         "league/commonmark": "^1.5",
+        "mgatner/adminlte4": "dev-master",
         "tatter/assets": "^3.0",
         "tatter/layouts": "^1.0",
         "tatter/menus": "^1.0",
         "tatter/themes": "^2.0",
-        "twbs/bootstrap": "^4.0"
+        "twbs/bootstrap": "^5.0"
     },
     "require-dev": {
         "codeigniter4/codeigniter4": "dev-develop",
@@ -58,7 +56,7 @@
         },
         {
             "type": "vcs",
-            "url": "https://github.com/DataTables/Dist-DataTables-Bootstrap4.git"
+            "url": "https://github.com/MGatner/adminlte4.git"
         },
         {
             "type": "composer",
