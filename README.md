@@ -44,6 +44,7 @@ php spark publish
 
 * [League\CommonMark](https://packagist.org/packages/league/commonmark)
 * [Tatter\Assets](https://packagist.org/packages/tatter/assets)
+* [Tatter\Layouts](https://packagist.org/packages/tatter/layouts)
 * [Tatter\Menus](https://packagist.org/packages/tatter/menus)
 * [Tatter\Themes](https://packagist.org/packages/tatter/themes)
 
