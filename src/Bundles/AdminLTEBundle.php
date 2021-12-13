@@ -12,8 +12,8 @@ class AdminLTEBundle extends FrontendBundle
     protected function define(): void
     {
         $this
-            ->addPath('adminlte/css/adminlte.min.css')
-            ->addPath('adminlte/js/adminlte.min.js')
+            ->addPath('adminlte/css/adminlte.css')
+            ->addPath('adminlte/js/adminlte.js')
             ->merge(new BootstrapBundle());
     }
 }

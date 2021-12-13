@@ -15,47 +15,27 @@ final class BundlesTest extends BundlesTestCase
             [
                 AdminLTEBundle::class,
                 [
-                    'adminlte.min.css',
+                    'adminlte.css',
                     'bootstrap.min.css',
-                    'jquery.min.js',
                 ],
                 [
-                    'adminlte.min.js',
+                    'adminlte.js',
+                    'bootstrap.bundle.min.js',
                 ],
             ],
             [
                 BootstrapBundle::class,
                 [
                     'bootstrap.min.css',
-                    'jquery.min.js',
                 ],
                 [
                     'bootstrap.bundle.min.js',
-                ],
-            ],
-            [
-                DataTablesBundle::class,
-                [
-                    'bootstrap.min.css',
-                    'jquery.min.js',
-                ],
-                [
-                    'bootstrap.bundle.min.js',
-                    'dataTables.bootstrap4.min.js',
-                    'jquery.dataTables.min.js',
                 ],
             ],
             [
                 FontAwesomeBundle::class,
                 [
                     'all.min.css',
-                ],
-                [],
-            ],
-            [
-                JQueryBundle::class,
-                [
-                    'jquery.min.js', // Note that unlike most JS files this goes in <head>
                 ],
                 [],
             ],
