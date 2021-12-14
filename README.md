@@ -122,8 +122,9 @@ you will need to include both.
 
 ## Testing
 
-This library includes some PHPUnit extension classes in **src/Test/** to assist with testing
-vendor-sourced Bundles and Publishers. These are uses to test the files from this library
-but are also available for other projects that use `Tatter\Frontend`. To test your own
-classes simply extend the appropriate test case and add a data provider method with your
-class name and criteria to meet. See the test files in **tests/** for examples.
+This library includes a PHPUnit extension classes in **src/Test/** to assist with testing
+vendor-sourced Publishers. `Tatter\Assets` has a similar test case for Bundles. These two
+classes are used to test the files from this library but are also available for other projects
+that use `Tatter\Frontend`. To test your own classes simply extend the appropriate test case
+and add a data provider method with your class name and criteria to meet. See the test files
+in **tests/** for examples.

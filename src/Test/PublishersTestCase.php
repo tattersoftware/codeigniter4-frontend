@@ -2,6 +2,7 @@
 
 namespace Tatter\Frontend\Test;
 
+use Tatter\Assets\Test\TestCase;
 use Tatter\Frontend\FrontendPublisher;
 
 abstract class PublishersTestCase extends TestCase
