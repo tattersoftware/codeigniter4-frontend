@@ -2,7 +2,7 @@
 
 namespace Tatter\Frontend\Bundles;
 
-use Tatter\Frontend\Test\BundlesTestCase;
+use Tatter\Assets\Test\BundlesTestCase;
 
 /**
  * @internal
