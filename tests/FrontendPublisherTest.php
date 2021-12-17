@@ -1,13 +1,16 @@
 <?php
 
-use Tatter\Assets\Test\TestCase;
+use CodeIgniter\Test\CIUnitTestCase;
+use Tatter\Assets\Test\AssetsTestTrait;
 use Tatter\Frontend\FrontendPublisher;
 
 /**
  * @internal
  */
-final class FrontendPublisherTest extends TestCase
+final class FrontendPublisherTest extends CIUnitTestCase
 {
+    use AssetsTestTrait;
+
     public function testPublisherThrowsWithoutPath()
     {
         $this->expectException('DomainException');
