@@ -2,11 +2,14 @@
 
 namespace Tatter\Frontend\Test;
 
-use Tatter\Assets\Test\TestCase;
+use CodeIgniter\Test\CIUnitTestCase;
+use Tatter\Assets\Test\AssetsTestTrait;
 use Tatter\Frontend\FrontendPublisher;
 
-abstract class PublishersTestCase extends TestCase
+abstract class PublishersTestCase extends CIUnitTestCase
 {
+    use AssetsTestTrait;
+
     /**
      * @dataProvider publisherProvider
      *
