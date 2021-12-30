@@ -28,7 +28,7 @@ abstract class PublishersTestCase extends CIUnitTestCase
 
         // Check for each of the expected files
         foreach ($expected as $path) {
-            $file = $this->config->directory . $this->config->vendor . $path;
+            $file = $this->assets->directory . $this->assets->vendor . $path;
             $this->assertFileExists($file);
         }
     }

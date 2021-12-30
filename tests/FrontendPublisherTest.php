@@ -29,6 +29,6 @@ final class FrontendPublisherTest extends CIUnitTestCase
             protected $path = 'foobar';
         };
 
-        $this->assertSame($this->config->directory . 'vendor/foobar/', $publisher->getDestination());
+        $this->assertSame($this->assets->directory . 'vendor/foobar/', $publisher->getDestination());
     }
 }
