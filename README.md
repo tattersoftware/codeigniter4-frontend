@@ -43,6 +43,7 @@ php spark publish
 ### Support Libraries
 
 * [League\CommonMark](https://packagist.org/packages/league/commonmark)
+* [Tatter\Alerts](https://packagist.org/packages/tatter/alerts)
 * [Tatter\Assets](https://packagist.org/packages/tatter/assets)
 * [Tatter\Layouts](https://packagist.org/packages/tatter/layouts)
 * [Tatter\Menus](https://packagist.org/packages/tatter/menus)
