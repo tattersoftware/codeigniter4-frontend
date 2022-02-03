@@ -25,8 +25,8 @@ final class FrontendPublisherTest extends CIUnitTestCase
         // Allow publishing to the test folder
         config('Publisher')->restrictions[SUPPORTPATH] = '*';
 
-        $publisher          = new class () extends FrontendPublisher {
-            protected $path = 'foobar';
+        $publisher                 = new class () extends FrontendPublisher {
+            protected string $path = 'foobar';
         };
 
         $this->assertSame($this->assets->directory . 'vendor/foobar/', $publisher->getDestination());

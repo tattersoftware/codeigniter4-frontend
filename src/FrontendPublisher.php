@@ -18,17 +18,15 @@ abstract class FrontendPublisher extends Publisher
     /**
      * Destination path relative to AssetsConfig::directory.
      * Must be set by child classes.
-     *
-     * @var string
      */
-    protected $path;
+    protected string $path = '';
 
     /**
      * Set the real destination.
      */
     public function __construct(?string $source = null, ?string $destination = null)
     {
-        if (! is_string($this->path)) {
+        if ($this->path === '') {
             throw new DomainException('Invalid relative destination $path.');
         }
 
