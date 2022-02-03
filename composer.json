@@ -27,7 +27,7 @@
         "datatables.net/datatables.net-bs4": "dev-master",
         "fortawesome/font-awesome": "^5.15",
         "components/jquery": "^3.3",
-        "league/commonmark": "^1.5",
+        "league/commonmark": "^2.0",
         "tatter/alerts": "^3.0",
         "tatter/assets": "^3.0",
         "tatter/layouts": "^1.0",
@@ -83,5 +83,10 @@
         "mutate": "infection --threads=2 --skip-initial-tests --coverage=build/phpunit",
         "style": "php-cs-fixer fix --verbose --ansi --using-cache=no",
         "test": "phpunit"
+    },
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
     }
 }
