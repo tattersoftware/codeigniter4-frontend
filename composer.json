@@ -22,11 +22,11 @@
         }
     ],
     "require": {
-        "php": "^7.3 || ^8.0",
+        "php": "^7.4 || ^8.0",
         "almasaeed2010/adminlte": "^3.0",
+        "components/jquery": "^3.3",
         "datatables.net/datatables.net-bs4": "dev-master",
         "fortawesome/font-awesome": "^5.15",
-        "components/jquery": "^3.3",
         "league/commonmark": "^2.0",
         "tatter/alerts": "^3.0",
         "tatter/assets": "^3.0",
@@ -36,8 +36,13 @@
         "twbs/bootstrap": "^4.0"
     },
     "require-dev": {
-        "codeigniter4/codeigniter4": "dev-develop",
-        "tatter/tools": "^1.15"
+        "codeigniter4/devkit": "^1.0",
+        "codeigniter4/framework": "^4.1"
+    },
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
     },
     "autoload": {
         "psr-4": {
@@ -53,10 +58,6 @@
         }
     },
     "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/codeigniter4/CodeIgniter4.git"
-        },
         {
             "type": "vcs",
             "url": "https://github.com/DataTables/Dist-DataTables-Bootstrap4.git"
@@ -76,17 +77,14 @@
             "@analyze",
             "@test",
             "@inspect",
+            "rector process",
             "@style"
         ],
         "deduplicate": "phpcpd app/ src/",
         "inspect": "deptrac analyze --cache-file=build/deptrac.cache",
         "mutate": "infection --threads=2 --skip-initial-tests --coverage=build/phpunit",
+        "retool": "retool",
         "style": "php-cs-fixer fix --verbose --ansi --using-cache=no",
         "test": "phpunit"
-    },
-    "config": {
-        "allow-plugins": {
-            "phpstan/extension-installer": true
-        }
     }
 }
