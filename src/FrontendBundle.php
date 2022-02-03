@@ -17,10 +17,8 @@ abstract class FrontendBundle extends Bundle
 {
     /**
      * The base directory, i.e. Assets directory + vendor path
-     *
-     * @var string|null
      */
-    private static $base;
+    private static ?string $base = null;
 
     /**
      * Returns the base path according to the configurations.

@@ -16,7 +16,7 @@ final class FrontendPublisherTest extends CIUnitTestCase
         $this->expectException('DomainException');
         $this->expectExceptionMessage('Invalid relative destination $path');
 
-        $publisher = new class () extends FrontendPublisher {
+        new class () extends FrontendPublisher {
         };
     }
 
