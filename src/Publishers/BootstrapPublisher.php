@@ -6,6 +6,6 @@ use Tatter\Frontend\FrontendPublisher;
 
 class BootstrapPublisher extends FrontendPublisher
 {
-    protected $source      = 'vendor/twbs/bootstrap/dist';
-    protected string $path = 'bootstrap';
+    protected string $vendorPath = 'twbs/bootstrap/dist';
+    protected string $publicPath = 'bootstrap';
 }

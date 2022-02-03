@@ -16,21 +16,31 @@ use DomainException;
 abstract class FrontendPublisher extends Publisher
 {
     /**
+     * Destination path relative to vendor/ directory.
+     * Must be set by child classes.
+     */
+    protected string $vendorPath = '';
+
+    /**
      * Destination path relative to AssetsConfig::directory.
      * Must be set by child classes.
      */
-    protected string $path = '';
+    protected string $publicPath = '';
 
     /**
      * Set the real destination.
      */
     public function __construct(?string $source = null, ?string $destination = null)
     {
-        if ($this->path === '') {
-            throw new DomainException('Invalid relative destination $path.');
+        if ($this->vendorPath === '') {
+            throw new DomainException('Invalid relative source path.');
+        }
+        if ($this->publicPath === '') {
+            throw new DomainException('Invalid relative destination path.');
         }
 
-        $this->destination = FrontendBundle::base() . ltrim($this->path, '\\/');
+        $this->source      = dirname(COMPOSER_PATH) . '/' . ltrim($this->vendorPath, '\\/');
+        $this->destination = FrontendBundle::base() . ltrim($this->publicPath, '\\/');
 
         if (! is_dir($this->destination)) {
             mkdir($this->destination, 0775, true);
