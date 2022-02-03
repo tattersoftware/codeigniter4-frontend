@@ -6,8 +6,8 @@ use Tatter\Frontend\FrontendPublisher;
 
 class FontAwesomePublisher extends FrontendPublisher
 {
-    protected $source      = 'vendor/fortawesome/font-awesome';
-    protected string $path = 'font-awesome';
+    protected string $vendorPath = 'fortawesome/font-awesome';
+    protected string $publicPath = 'font-awesome';
 
     /**
      * Reads files from the sources and copies them out to their destinations.

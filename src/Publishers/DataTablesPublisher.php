@@ -6,8 +6,8 @@ use Tatter\Frontend\FrontendPublisher;
 
 class DataTablesPublisher extends FrontendPublisher
 {
-    protected $source      = 'vendor/datatables.net/datatables.net';
-    protected string $path = 'datatables';
+    protected string $vendorPath = 'datatables.net/datatables.net';
+    protected string $publicPath = 'datatables';
 
     /**
      * Reads files from the sources and copies them out to their destinations.

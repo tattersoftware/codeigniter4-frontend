@@ -6,6 +6,6 @@ use Tatter\Frontend\FrontendPublisher;
 
 class JQueryPublisher extends FrontendPublisher
 {
-    protected $source      = 'vendor/components/jquery';
-    protected string $path = 'jquery';
+    protected string $vendorPath = 'components/jquery';
+    protected string $publicPath = 'jquery';
 }
