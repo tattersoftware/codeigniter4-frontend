@@ -19,6 +19,7 @@ class DataTablesPublisher extends FrontendPublisher
         return $this
             ->addPath('js')
             ->addPath('types')
+            ->removePattern('*.ts')
             ->merge(true);
     }
 }
