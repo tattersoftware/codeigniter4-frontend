@@ -21,6 +21,7 @@ class DataTablesStylePublisher extends FrontendPublisher
             ->addPath('images')
             ->addPath('js')
             ->addPath('types')
+            ->removePattern('*.ts')
             ->merge(true);
     }
 }

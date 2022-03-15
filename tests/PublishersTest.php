@@ -34,7 +34,6 @@ final class PublishersTest extends PublishersTestCase
                 DataTablesPublisher::class,
                 [
                     'datatables/js/jquery.dataTables.js',
-                    'datatables/types/types.d.ts',
                 ],
             ],
             [
