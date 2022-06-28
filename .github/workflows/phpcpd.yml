@@ -4,12 +4,14 @@ on:
   pull_request:
     branches:
       - develop
+      - 'v*'
     paths:
       - '**.php'
       - '.github/workflows/phpcpd.yml'
   push:
     branches:
       - develop
+      - 'v*'
     paths:
       - '**.php'
       - '.github/workflows/phpcpd.yml'
