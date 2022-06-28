@@ -50,7 +50,7 @@ final class PublishersTest extends PublishersTestCase
                 [
                     'font-awesome/css/all.min.css',
                     'font-awesome/css/svg-with-js.css',
-                    'font-awesome/webfonts/fa-brands-400.eot',
+                    'font-awesome/webfonts/fa-brands-400.ttf',
                     'font-awesome/webfonts/fa-solid-900.woff2',
                 ],
             ],
