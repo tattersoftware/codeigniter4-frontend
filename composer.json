@@ -1,7 +1,8 @@
 {
     "name": "tatter/frontend",
-    "type": "library",
     "description": "Opinionated suite of frontend tech for CodeIgniter 4",
+    "license": "MIT",
+    "type": "library",
     "keywords": [
         "codeigniter",
         "codeigniter4",
@@ -11,8 +12,6 @@
         "javascript",
         "css"
     ],
-    "homepage": "https://github.com/tattersoftware/codeigniter4-frontend",
-    "license": "MIT",
     "authors": [
         {
             "name": "Matthew Gatner",
@@ -21,6 +20,7 @@
             "role": "Developer"
         }
     ],
+    "homepage": "https://github.com/tattersoftware/codeigniter4-frontend",
     "require": {
         "php": "^7.4 || ^8.0",
         "almasaeed2010/adminlte": "^3.0",
@@ -39,11 +39,18 @@
         "codeigniter4/framework": "^4.1",
         "tatter/tools": "^2.0"
     },
-    "config": {
-        "allow-plugins": {
-            "phpstan/extension-installer": true
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/DataTables/Dist-DataTables-Bootstrap4.git"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
-    },
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "Tatter\\Frontend\\": "src"
@@ -57,20 +64,16 @@
             "Tests\\Support\\": "tests/_support"
         }
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/DataTables/Dist-DataTables-Bootstrap4.git"
-        },
-        {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true
         }
-    ],
-    "minimum-stability": "dev",
-    "prefer-stable": true,
+    },
     "scripts": {
-        "analyze": "phpstan analyze",
+        "analyze": [
+            "phpstan analyze",
+            "psalm"
+        ],
         "ci": [
             "Composer\\Config::disableProcessTimeout",
             "@deduplicate",
