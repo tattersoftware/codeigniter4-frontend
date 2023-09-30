@@ -36,7 +36,7 @@ final class FrontendPublisherTest extends CIUnitTestCase
         // Allow publishing to the test folder
         config('Publisher')->restrictions[SUPPORTPATH] = '*';
 
-        $publisher                       = new class () extends FrontendPublisher {
+        $publisher = new class () extends FrontendPublisher {
             protected string $publicPath = 'foobar';
             protected string $vendorPath = 'almasaeed2010/adminlte/dist';
         };

@@ -10,10 +10,22 @@ $finder = Finder::create()
         __DIR__ . '/src/',
         __DIR__ . '/tests/',
     ])
-    ->exclude('build')
-    ->append([__FILE__]);
+    ->exclude([
+        'build',
+        'Views',
+    ])
+    ->append([
+        __FILE__,
+        __DIR__ . '/rector.php',
+    ]);
 
-$overrides = [];
+$overrides = [
+    'php_unit_data_provider_name'        => false,
+    'php_unit_data_provider_return_type' => false,
+    'php_unit_data_provider_static'      => false,
+    // 'declare_strict_types' => true,
+    // 'void_return'          => true,
+];
 
 $options = [
     'finder'    => $finder,
