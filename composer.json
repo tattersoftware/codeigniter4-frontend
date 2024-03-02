@@ -22,7 +22,7 @@
     ],
     "homepage": "https://github.com/tattersoftware/codeigniter4-frontend",
     "require": {
-        "php": "^7.4 || ^8.0",
+        "php": "^8.0",
         "almasaeed2010/adminlte": "^3.0",
         "components/jquery": "^3.3",
         "datatables.net/datatables.net-bs4": "dev-master",
