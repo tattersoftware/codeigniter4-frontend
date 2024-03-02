@@ -33,14 +33,13 @@ final class PublishersTest extends PublishersTestCase
             [
                 DataTablesPublisher::class,
                 [
-                    'datatables/js/jquery.dataTables.js',
+                    'datatables/js/dataTables.min.js',
                 ],
             ],
             [
                 DataTablesStylePublisher::class,
                 [
                     'datatables/css/dataTables.bootstrap4.min.css',
-                    'datatables/images/sort_asc_disabled.png',
                     'datatables/js/dataTables.bootstrap4.js',
                 ],
             ],

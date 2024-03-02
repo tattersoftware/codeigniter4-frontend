@@ -42,7 +42,6 @@ final class BundlesTest extends BundlesTestCase
                 [
                     'bootstrap.bundle.min.js',
                     'dataTables.bootstrap4.min.js',
-                    'jquery.dataTables.min.js',
                 ],
             ],
             [

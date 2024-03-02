@@ -18,10 +18,10 @@ class DataTablesStylePublisher extends FrontendPublisher
     {
         return $this
             ->addPath('css')
-            ->addPath('images')
             ->addPath('js')
             ->addPath('types')
             ->removePattern('*.ts')
+            ->removePattern('*.mjs')
             ->merge(true);
     }
 }
