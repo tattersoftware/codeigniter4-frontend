@@ -14,7 +14,7 @@ abstract class PublishersTestCase extends CIUnitTestCase
      * @dataProvider publisherProvider
      *
      * @param class-string<FrontendPublisher> $class
-     * @param string[]                        $expected
+     * @param list<string>                    $expected
      */
     public function testPublishesFiles(string $class, array $expected): void
     {
