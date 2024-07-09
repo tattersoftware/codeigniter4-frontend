@@ -33,7 +33,7 @@
         "tatter/layouts": "^1.0",
         "tatter/menus": "^1.0",
         "tatter/themes": "^2.0",
-        "twbs/bootstrap": "^4.0"
+        "twbs/bootstrap": "^4.0 || ^5.0"
     },
     "require-dev": {
         "codeigniter4/framework": "^4.1",
